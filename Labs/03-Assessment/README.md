@@ -125,3 +125,24 @@ No.
 
 Subdomains don't have WHOIS records, as they are not meant to be used by a lot other than the registrant of the domain itself. DK-Hostmaster (DK NIC) therefor redirects all *.\<\<domain\>\> to \<\<domain\>\>
 
+## Question: nmap
+Nmap scans can be set up to evade firewalls. Which tags would you use for:
+* Send packets with specified ip options  
+`--ip-options <options>`
+
+* Spoof your MAC address  
+`--spoof-mac <mac address>`
+
+## Scanning the Metasploitable VMs
+Use Nmap, to scan and find out information about Metasploitable-3, both Windows and Ubuntu. In your use of Nmap compare your SYN scan vs the Connect scan vs the scan with the tag that enables OS detection, version detection, script scanning.
+
+Take notes of the results for all three and discuss differences and pros and cons based on your observation.
+
+**Nmap flags**
+
+| nmap flags | |
+|-------|-------|
+| SYN scan | `-sS` |
+| Connect scan | `-sT` |
+| OS and Version Det. | `-O -sV` |
+
