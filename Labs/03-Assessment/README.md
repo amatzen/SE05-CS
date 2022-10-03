@@ -111,5 +111,17 @@ last-modified:  2022-03-02T14:30:42Z
 source:         RIPE
 
 % This query was served by the RIPE Database Query Service version 1.103 (BLAARKOP)
-
 ```
+
+3. What do you learn about SDU’s network? In the protocol, note the IP-range.
+
+The WHOIS information provided by DK-Hostmaster is just regular public information of the registrant, SDU. The WHOIS information provided by RIPE about the IP-address is more detailed and shows relevant information about the Autonomous System number of the ISP and the sub organisation using the ISP's LIC.
+
+4. Are there other Networking-Services @SDU which you could try?
+
+No.
+
+5. What is the whois information for nextcloud.sdu.dk ? What do you observein comparison to the whois-information you gathered for www.sdu.dk.
+
+Subdomains don't have WHOIS records, as they are not meant to be used by a lot other than the registrant of the domain itself. DK-Hostmaster (DK NIC) therefor redirects all *.\<\<domain\>\> to \<\<domain\>\>
+
