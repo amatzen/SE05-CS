@@ -48,7 +48,7 @@ Hostname:             ns2.sdu.dk
 Hostname:             ns3.sdu.dk
 ```
 
-2. Returns WHOIS data about the ISP, Forskningsnettet (DeiC):
+2. Returns WHOIS data about the ISP:
 
 ```
 $ dig a +short www.sdu.dk
