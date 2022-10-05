@@ -66,8 +66,13 @@ Secondly, SSH users should authenticate using PKI (Key Pairs) as passwords are q
 **Which do you see, and how would you address them?**  
 Users shouldn't have root access, but instead follow the *least-privilege principle*.
 
-**Can SQL Injection expose an otherwise inaccessible database server?**
+**Can SQL Injection expose an otherwise inaccessible database server?**  
+Yes. Just shown we have root access to an Ubuntu server, which we got granted using SQL injection attacks.
 
-**How likely do you think an attack scenario as presented here is?**
+**How likely do you think an attack scenario as presented here is?**  
+It has been more severe, than it is, today. Nowadays most uses frameworks to use their SQL databases or prepared statements. But if you asked me five years ago, I would suggest the risk of such an event occur is servere. I would today name the risk small to moderate.
+
+Additionally, in most SQL injection attacks, the passwords are hashed and they are not identical to SSH users. So that part would probably be less likely.
+
 
 
