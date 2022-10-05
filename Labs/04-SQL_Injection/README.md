@@ -21,3 +21,13 @@ No. Security by obscurity doesn't ensure that the MySQL server is protected agai
 **Please shortly discuss your opinion of this web server’s configuration concerning directly listings**
 
 Relating to a PHP application server, we would argue for it's bad practice to let Apache 2 show the index of the root document folder. If this practice is done, the knowledge about hidden folders and files may be exposed, as well it could suggest to the attacker, that the server also might be misconfigured regarding file permissions.
+
+**What type of SQLi attack works? Can you explain why?**  
+* Boolean-based
+* Union-based
+
+Boolean-based SQL injection attacks work in this context, as we are able to access all rows by determining a WHERE clause that is always true.
+
+Union-based attacks work too, an example of how is shown below.
+
+
