@@ -49,11 +49,12 @@ zsh: segmentation fault  nmap -sV -p 3306 13.37.0.6
 
 According to the nmap search, it's MySQL Server.
 
+**What is the \# sign for?**
+It's a comment, preventing additional queries to execute, that could affect the displayed result - especially using UNION SQL injection attacks.
+
 **What do you notice about these passwords? What would you change to secure them?**  
 The passwords are stored (virtually at least) in plain text, therefore a database leak could result in these informations being published, which could lead to unauthorized access to both this service and external services (studies find that most Danes use the same password twice).
 
 An improvement would be to use PBKDF2, Argon2 or Bcrypt, which are hashing mechanics, that also uses random bit generators to mitigate the risk of reverse-databases, that for instance are available to SHA and MD5.
 
-**What is the \# sign for?**
-It's a comment, preventing additional queries to execute, that could affect the displayed result - especially using UNION SQL injection attacks.
 
