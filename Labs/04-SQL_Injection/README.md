@@ -62,4 +62,12 @@ The SSH server is publicly exposed on port 22, which is in general known as bad 
 
 Secondly, SSH users should authenticate using PKI (Key Pairs) as passwords are quite bruteforcable.
 
+### Elevation of privileges
+**Which do you see, and how would you address them?**  
+Users shouldn't have root access, but instead follow the *least-privilege principle*.
+
+**Can SQL Injection expose an otherwise inaccessible database server?**
+
+**How likely do you think an attack scenario as presented here is?**
+
 
