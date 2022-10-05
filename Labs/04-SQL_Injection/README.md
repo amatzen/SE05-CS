@@ -31,3 +31,21 @@ Boolean-based SQL injection attacks work in this context, as we are able to acce
 Union-based attacks work too, an example of how is shown below.
 
 
+**What service is running there?**
+```
+$ nmap -sV -p 3306 13.37.0.6
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-10-05 11:25 EDT
+Nmap scan report for ms (13.37.0.6)
+Host is up (0.00077s latency).
+
+PORT     STATE SERVICE VERSION
+3306/tcp open  mysql   MySQL (unauthorized)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.30 seconds
+zsh: segmentation fault  nmap -sV -p 3306 13.37.0.6
+```
+
+According to the nmap search, it's MySQL Server.
+
