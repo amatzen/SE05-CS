@@ -17,3 +17,7 @@ No. Security by obscurity doesn't ensure that the MySQL server is protected agai
 **And what exactly would it protect against?**  
 
 
+### Spying with SQL Injection
+**Please shortly discuss your opinion of this web server’s configuration concerning directly listings**
+
+Relating to a PHP application server, we would argue for it's bad practice to let Apache 2 show the index of the root document folder. If this practice is done, the knowledge about hidden folders and files may be exposed, as well it could suggest to the attacker, that the server also might be misconfigured regarding file permissions.
