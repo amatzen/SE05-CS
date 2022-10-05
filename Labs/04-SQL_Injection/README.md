@@ -74,5 +74,28 @@ It has been more severe, than it is, today. Nowadays most uses frameworks to use
 
 Additionally, in most SQL injection attacks, the passwords are hashed and they are not identical to SSH users. So that part would probably be less likely.
 
+### Using our Foot in the Door for Access to Other Services
+```
+$ sudo find / -iname "*payroll*"
 
+/home/kylo_ren/poc/payroll_app
+/var/www/html/payroll_app.php
+/var/lib/mysql-default/payroll
+```
 
+**Is sudo necessary? What do we gain by using it?**  
+Without sudo, we would only get results from the directories, where the user logged into, is permitted access. Using sudo we get access to the whole file system.
+
+**Are there other ways to search for a file? Which do you know?**  
+It differs from environment (OS and installed packages), but I'm aware of using `ls` and combining it with some flags and pipeline the data to `grep`. However I find `find` most useful.
+
+**Can you find anything interesting?**  
+At line 2, the PHP mysqli connection to the MySQL server including database credentials is defined. This would allow for more streamlined access to the database.
+
+**Whats the username, password and database name?**  
+Username: root  
+Password: sploitme  
+Database: payroll
+
+**What was the problem with the web application?**  
+It concatinates the query directly with values without any escaping, so malicious values can modify the query itself. A 
