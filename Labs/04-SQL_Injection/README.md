@@ -49,3 +49,6 @@ zsh: segmentation fault  nmap -sV -p 3306 13.37.0.6
 
 According to the nmap search, it's MySQL Server.
 
+**What do you notice about these passwords? What would you change to secure them?**
+
+
