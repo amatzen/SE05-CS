@@ -57,4 +57,9 @@ The passwords are stored (virtually at least) in plain text, therefore a databas
 
 An improvement would be to use PBKDF2, Argon2 or Bcrypt, which are hashing mechanics, that also uses random bit generators to mitigate the risk of reverse-databases, that for instance are available to SHA and MD5.
 
+**Which other problem allows you to get into the machine using ssh? How could this be prevented?**  
+The SSH server is publicly exposed on port 22, which is in general known as bad practice. It should be behind a VPN or jump server, or even just be local access only, to prevent threats exploiting SSH access.
+
+Secondly, SSH users should authenticate using PKI (Key Pairs) as passwords are quite bruteforcable.
+
 
